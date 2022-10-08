@@ -1,0 +1,52 @@
+<section id="inputs">
+    <div class="container">
+      <div class="col-lg-12">
+  
+        <div class="campos" *ngIf="hero">
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default" style="padding-right: 45px;background-color: #212529;
+            color: white;">Type</span>
+            <input [(ngModel)]="hero.name" type="text" class="form-control" aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default" >
+          </div>
+  
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default" style="background-color: #212529;
+            color: white; padding-right:34px ;">Name</span>
+            <input [(ngModel)]="hero.firstName" type="text" class="form-control" aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default">
+          </div>
+  
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default" style="padding-right: 34px;background-color: #212529;
+            color: white;">Utility</span>
+            <input [(ngModel)]="hero.lastName" type="text" class="form-control" aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default">
+          </div>
+  
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default" style="padding-right: 40px;background-color: #212529;
+            color: white;">Price</span>
+            <input [(ngModel)]="hero.place" type="text" class="form-control" aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default">
+          </div>
+          <div class="botoes">
+            <button (click)="updateHero(hero)" *ngIf="hero.id">Save</button>
+            <button (click)="deleteHero(hero)" *ngIf="hero.id">Delete</button>
+            <button (click)="createHero(hero)" *ngIf="!hero.id">Create</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
